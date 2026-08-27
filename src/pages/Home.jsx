@@ -11,12 +11,13 @@ import FloatingActions from '../components/FloatingActions';
 import ServicesSection from '../components/ServicesSection';
 import StatsSection from '../components/StatsSection';
 import TestimonialsSection from '../components/TestimonialsSection';
+import MobileSearch from '../components/MobileSearch';
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const closeMenu = () => setMenuOpen(false);
   return <>
-    <header className="site-header"><Brand /><button className="menu-toggle" aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>Menu <span>{menuOpen ? '−' : '+'}</span></button><nav className={`main-nav ${menuOpen ? 'is-open' : ''}`} aria-label="Main navigation"><a href="#services" onClick={closeMenu}>Services</a><a href="#work" onClick={closeMenu}>Our work</a><a href="#about" onClick={closeMenu}>About</a><a className="nav-cta" href="#contact" onClick={closeMenu}>Book a gig <span>↗</span></a></nav></header>
+    <header className="site-header"><button className="menu-toggle" aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>Menu <span>{menuOpen ? '−' : '+'}</span></button><Brand /><MobileSearch /><nav className={`main-nav ${menuOpen ? 'is-open' : ''}`} aria-label="Main navigation"><a href="#services" onClick={closeMenu}>Services</a><a href="#work" onClick={closeMenu}>Our work</a><a href="#about" onClick={closeMenu}>About</a><a className="nav-cta" href="#contact" onClick={closeMenu}>Book a gig <span>↗</span></a></nav></header>
     <main id="top">
       <HeroSlider />
       <AboutSlider />

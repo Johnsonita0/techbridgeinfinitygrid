@@ -9,5 +9,5 @@ const questions = [
 
 export default function FaqSection() {
   const [openQuestion, setOpenQuestion] = useState(0);
-  return <section className="faq-section"><div className="section-wrap faq-grid"><div><p className="eyebrow">Questions, answered</p><h2>Let’s clear<br /><em>things up.</em></h2></div><div className="faq-list">{questions.map(([question, answer], index) => <div className={`faq-item ${openQuestion === index ? 'is-open' : ''}`} key={question}><button type="button" aria-expanded={openQuestion === index} onClick={() => setOpenQuestion(openQuestion === index ? -1 : index)}><span>{question}</span><b>{openQuestion === index ? '−' : '+'}</b></button>{openQuestion === index && <p>{answer}</p>}</div>)}</div></div></section>;
+  return <section id="faq" className="faq-section"><div className="section-wrap faq-grid"><div><p className="eyebrow">Questions, answered</p><h2>Let’s clear<br /><em>things up.</em></h2></div><div className="faq-list">{questions.map(([question, answer], index) => <div className={`faq-item ${openQuestion === index ? 'is-open' : ''}`} key={question}><button type="button" aria-expanded={openQuestion === index} onClick={() => setOpenQuestion(openQuestion === index ? -1 : index)}><span>{question}</span><b>{openQuestion === index ? '−' : '+'}</b></button>{openQuestion === index && <p>{answer}</p>}</div>)}</div></div></section>;
 }

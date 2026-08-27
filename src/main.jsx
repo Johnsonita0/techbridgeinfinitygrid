@@ -4,6 +4,7 @@ import App from './App';
 import './css/styles.css';
 import './css/theme.css';
 import './css/tutoring.css';
+import './css/mobile-search.css';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
