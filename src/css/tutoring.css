@@ -1,0 +1,2 @@
+.tutoring-form-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px}.form-progress{overflow:hidden}.tutoring-step{grid-column:1/-1}.tutoring-form-actions{grid-column:1/-1}
+@media (max-width:800px){.tutoring-form-head{align-items:flex-start}.tutoring-step{display:block}.tutoring-step label{display:block;margin-top:18px}.tutoring-form-actions{margin-top:24px}.tutoring-form-actions .button{margin-top:0}}
