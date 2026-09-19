@@ -1,0 +1,310 @@
+:root {
+  --sand: #d9b47a;
+  --sand-deep: #b8894d;
+  --sand-wash: rgba(217, 180, 122, .18);
+}
+
+.button,
+.nav-cta,
+.portfolio-trigger,
+.search-toggle,
+.menu-toggle,
+.service-card button,
+.service-mobile-controls button,
+.testimonial-controls button,
+.back-to-top,
+.whatsapp-button,
+.socials a,
+#gig-form,
+.tutoring-form,
+.testimonial-form,
+.portfolio-panel,
+.portfolio-project,
+.portfolio-project-media,
+.project-card,
+.service-card,
+.testimonial-card,
+.faq-item,
+.services-slider-card,
+.testimonial-slider {
+  border-radius: 10px;
+}
+
+.button,
+.nav-cta,
+.portfolio-trigger,
+.search-toggle,
+.menu-toggle,
+.service-card button,
+.service-mobile-controls button,
+.testimonial-controls button,
+.back-to-top,
+.socials a,
+.portfolio-project-media,
+.project-card,
+.service-card,
+.testimonial-card,
+.faq-item,
+.services-slider-card,
+.testimonial-slider {
+  transition: background-color .3s ease, border-color .3s ease, color .3s ease, box-shadow .3s ease, transform .3s ease;
+}
+
+.button,
+.nav-cta,
+.portfolio-trigger,
+.search-toggle,
+.menu-toggle,
+.service-card button,
+.service-mobile-controls button,
+.testimonial-controls button,
+.back-to-top,
+.socials a,
+.portfolio-project,
+.project-card,
+.service-card,
+.testimonial-card,
+.faq-item,
+.services-slider-card,
+.testimonial-slider {
+  background-image: linear-gradient(var(--sand), var(--sand));
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: 100% 0%;
+  transition: background-size .45s cubic-bezier(.22, .61, .36, 1), background-color .3s ease, border-color .3s ease, color .3s ease, box-shadow .3s ease, transform .3s ease;
+}
+
+.button,
+.nav-cta,
+.portfolio-trigger,
+.search-toggle,
+.menu-toggle,
+.service-card button,
+.service-mobile-controls button,
+.testimonial-controls button,
+.back-to-top,
+.socials a {
+  position: relative;
+  overflow: hidden;
+}
+
+.button::before,
+.nav-cta::before,
+.portfolio-trigger::before,
+.search-toggle::before,
+.menu-toggle::before,
+.service-card button::before,
+.service-mobile-controls button::before,
+.testimonial-controls button::before,
+.back-to-top::before,
+.socials a::before {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  inset: -100% 0 auto;
+  height: 200%;
+  opacity: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, rgba(255, 247, 225, .98) 0 2.5px, transparent 3px), radial-gradient(circle, rgba(184, 137, 77, .95) 0 2px, transparent 2.5px), radial-gradient(circle, rgba(255, 247, 225, .85) 0 1.5px, transparent 2px);
+  background-position: 8px 0, 21px 12px, 34px 5px;
+  background-size: 38px 31px, 47px 39px, 29px 27px;
+  animation: sand-pour .7s linear infinite;
+}
+
+.button > *,
+.nav-cta > *,
+.portfolio-trigger > *,
+.search-toggle > *,
+.menu-toggle > *,
+.service-card button > *,
+.service-mobile-controls button > *,
+.testimonial-controls button > *,
+.back-to-top > *,
+.socials a > * {
+  position: relative;
+  z-index: 1;
+}
+
+.button::after,
+.nav-cta::after,
+.portfolio-trigger::after,
+.search-toggle::after,
+.menu-toggle::after,
+.socials a::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 28%, rgba(255, 248, 231, .42) 50%, transparent 72%);
+  transform: translateX(-130%);
+  transition: transform .55s ease;
+  pointer-events: none;
+}
+
+.button:hover,
+.nav-cta:hover,
+.portfolio-trigger:hover,
+.search-toggle:hover,
+.menu-toggle:hover,
+.service-card button:hover,
+.service-mobile-controls button:hover,
+.testimonial-controls button:hover,
+.back-to-top:hover,
+.socials a:hover {
+  border-color: var(--sand-deep);
+  color: var(--ink);
+  box-shadow: 0 8px 18px rgba(184, 137, 77, .24);
+  transform: translateY(-3px);
+  background-size: 100% 100%;
+}
+
+.button:hover::before,
+.nav-cta:hover::before,
+.portfolio-trigger:hover::before,
+.search-toggle:hover::before,
+.menu-toggle:hover::before,
+.service-card button:hover::before,
+.service-mobile-controls button:hover::before,
+.testimonial-controls button:hover::before,
+.back-to-top:hover::before,
+.socials a:hover::before {
+  opacity: .75;
+}
+@keyframes sand-pour { from { transform: translateY(0); } to { transform: translateY(50%); } }
+
+.button:hover::after,
+.nav-cta:hover::after,
+.portfolio-trigger:hover::after,
+.search-toggle:hover::after,
+.menu-toggle:hover::after,
+.socials a:hover::after {
+  transform: translateX(130%);
+}
+
+.portfolio-project:hover,
+.project-card:hover,
+.service-card:hover,
+.testimonial-card:hover,
+.faq-item:hover,
+.services-slider-card:hover,
+.testimonial-slider:hover,
+#gig-form:hover,
+.tutoring-form:hover,
+.testimonial-form:hover {
+  border-color: var(--sand-deep);
+  box-shadow: 0 14px 28px rgba(184, 137, 77, .16);
+  transform: translateY(-5px);
+  background-size: 100% 100%;
+}
+
+.portfolio-project-media:hover {
+  border-color: var(--sand);
+  box-shadow: 0 12px 24px rgba(184, 137, 77, .22);
+}
+
+.main-nav > a,
+.footer-column a,
+.text-link,
+.portfolio-project-copy h2 a,
+.portfolio-project-copy > div a,
+.portfolio-panel-heading a,
+.portfolio-items > a {
+  transition: color .25s ease, transform .25s ease, text-shadow .25s ease;
+}
+
+.main-nav > a:hover,
+.footer-column a:hover,
+.text-link:hover,
+.portfolio-project-copy h2 a:hover,
+.portfolio-project-copy > div a:hover,
+.portfolio-panel-heading a:hover,
+.portfolio-items > a:hover {
+  color: var(--sand-deep);
+  text-shadow: 0 3px 14px rgba(184, 137, 77, .32);
+  transform: translateX(3px);
+}
+
+.portfolio-items > a:nth-child(2n):hover,
+.footer-column:nth-child(3) a:hover {
+  color: var(--coral);
+}
+
+.portfolio-items > a:nth-child(3n):hover,
+.footer-column:nth-child(4) a:hover {
+  color: #6f9f9a;
+}
+
+/* Vary the hover personality across controls while keeping the sand pour shared. */
+:is(.button, .nav-cta, .portfolio-trigger, .search-toggle, .menu-toggle, .service-card button, .service-mobile-controls button, .testimonial-controls button, .back-to-top, .socials a):nth-child(4n + 1):hover {
+  animation: button-stretch .55s cubic-bezier(.22, .61, .36, 1) both;
+}
+
+:is(.button, .nav-cta, .portfolio-trigger, .search-toggle, .menu-toggle, .service-card button, .service-mobile-controls button, .testimonial-controls button, .back-to-top, .socials a):nth-child(4n + 2):hover {
+  border-radius: 18px 6px 18px 6px;
+  animation: button-peel .55s cubic-bezier(.22, .61, .36, 1) both;
+}
+
+:is(.button, .nav-cta, .portfolio-trigger, .search-toggle, .menu-toggle, .service-card button, .service-mobile-controls button, .testimonial-controls button, .back-to-top, .socials a):nth-child(4n + 3):hover {
+  filter: saturate(1.2) brightness(1.08);
+  box-shadow: 0 0 0 2px rgba(217, 180, 122, .5), 0 10px 24px rgba(217, 180, 122, .32);
+  animation: button-frost .7s ease both;
+}
+
+:is(.button, .nav-cta, .portfolio-trigger, .search-toggle, .menu-toggle, .service-card button, .service-mobile-controls button, .testimonial-controls button, .back-to-top, .socials a):nth-child(4n):hover {
+  animation: button-gravity .7s cubic-bezier(.22, .61, .36, 1) both;
+}
+
+:is(.button, .nav-cta, .portfolio-trigger, .search-toggle, .menu-toggle, .service-card button, .service-mobile-controls button, .testimonial-controls button, .back-to-top, .socials a):hover,
+:is(.button, .nav-cta, .portfolio-trigger, .search-toggle, .menu-toggle, .service-card button, .service-mobile-controls button, .testimonial-controls button, .back-to-top, .socials a):hover span,
+:is(.button, .nav-cta, .portfolio-trigger, .search-toggle, .menu-toggle, .service-card button, .service-mobile-controls button, .testimonial-controls button, .back-to-top, .socials a):hover svg {
+  color: var(--ink) !important;
+  text-shadow: none;
+}
+
+:is(.portfolio-project, .project-card, .service-card, .testimonial-card, .faq-item, .services-slider-card, .testimonial-slider, #gig-form, .tutoring-form, .testimonial-form):hover {
+  color: var(--ink);
+}
+
+:is(.portfolio-project, .project-card, .service-card, .testimonial-card, .faq-item, .services-slider-card, .testimonial-slider, #gig-form, .tutoring-form, .testimonial-form):hover p,
+:is(.portfolio-project, .project-card, .service-card, .testimonial-card, .faq-item, .services-slider-card, .testimonial-slider, #gig-form, .tutoring-form, .testimonial-form):hover span,
+:is(.portfolio-project, .project-card, .service-card, .testimonial-card, .faq-item, .services-slider-card, .testimonial-slider, #gig-form, .tutoring-form, .testimonial-form):hover a {
+  color: var(--ink);
+}
+
+@keyframes button-stretch { 0% { transform: translateY(-3px) scaleX(1); } 55% { transform: translateY(-3px) scaleX(1.08); } 100% { transform: translateY(-3px) scaleX(1.03); } }
+@keyframes button-peel { 0% { transform: translateY(-3px) rotate(0); } 55% { transform: translateY(-3px) rotate(-2deg); } 100% { transform: translateY(-3px) rotate(1deg); } }
+@keyframes button-frost { 0% { transform: translateY(-3px); filter: saturate(1) brightness(1); } 50% { transform: translateY(-6px); filter: saturate(1.3) brightness(1.16); } 100% { transform: translateY(-3px); filter: saturate(1.2) brightness(1.08); } }
+@keyframes button-gravity { 0% { transform: translateY(-3px); } 45% { transform: translateY(2px); } 70% { transform: translateY(-5px); } 100% { transform: translateY(-3px); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .button,
+  .nav-cta,
+  .portfolio-trigger,
+  .search-toggle,
+  .menu-toggle,
+  .service-card,
+  .testimonial-card,
+  .portfolio-project,
+  .portfolio-project-media,
+  .faq-item,
+  .services-slider-card,
+  .testimonial-slider {
+    transition: none;
+  }
+
+  .button::before,
+  .nav-cta::before,
+  .portfolio-trigger::before,
+  .search-toggle::before,
+  .menu-toggle::before,
+  .service-card button::before,
+  .service-mobile-controls button::before,
+  .testimonial-controls button::before,
+  .back-to-top::before,
+  .socials a::before {
+    animation: none;
+  }
+
+  :is(.button, .nav-cta, .portfolio-trigger, .search-toggle, .menu-toggle, .service-card button, .service-mobile-controls button, .testimonial-controls button, .back-to-top, .socials a):hover {
+    animation: none;
+  }
+}

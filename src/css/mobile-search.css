@@ -1,6 +1,12 @@
 .mobile-search { display: none; }
 
 @media (max-width: 800px) {
+  .menu-toggle { width: 36px; height: 36px; display: grid; place-items: center; padding: 0; }
+  .hamburger-icon { display: grid; gap: 4px; width: 20px; }
+  .hamburger-icon i { display: block; width: 20px; height: 2px; background: var(--ink); transition: transform .2s ease, opacity .2s ease; }
+  .menu-toggle[aria-expanded="true"] .hamburger-icon i:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+  .menu-toggle[aria-expanded="true"] .hamburger-icon i:nth-child(2) { opacity: 0; }
+  .menu-toggle[aria-expanded="true"] .hamburger-icon i:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
   .site-header { display: grid; grid-template-columns: 1fr auto 1fr; gap: 12px; }
   .site-header > .menu-toggle { display: block; grid-column: 1; justify-self: start; }
   .site-header > .brand { grid-column: 2; justify-self: center; }

@@ -12,12 +12,13 @@ import ServicesSection from '../components/ServicesSection';
 import StatsSection from '../components/StatsSection';
 import TestimonialsSection from '../components/TestimonialsSection';
 import MobileSearch from '../components/MobileSearch';
+import PortfolioMenu from '../components/PortfolioMenu';
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const closeMenu = () => setMenuOpen(false);
   return <>
-    <header className="site-header"><button className="menu-toggle" aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>Menu <span>{menuOpen ? '−' : '+'}</span></button><Brand /><MobileSearch /><nav className={`main-nav ${menuOpen ? 'is-open' : ''}`} aria-label="Main navigation"><a href="#services" onClick={closeMenu}>Services</a><a href="#work" onClick={closeMenu}>Our work</a><a href="#about" onClick={closeMenu}>About</a><a className="nav-cta" href="#contact" onClick={closeMenu}>Book a gig <span>↗</span></a></nav></header>
+    <header className="site-header"><button className="menu-toggle" type="button" aria-label={menuOpen ? 'Close navigation' : 'Open navigation'} aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}><span className="hamburger-icon" aria-hidden="true"><i /><i /><i /></span></button><Brand /><MobileSearch /><nav className={`main-nav ${menuOpen ? 'is-open' : ''}`} aria-label="Main navigation"><a href="#services" onClick={closeMenu}>Services</a><PortfolioMenu onNavigate={closeMenu} /><a href="#about" onClick={closeMenu}>About</a><a className="nav-cta" href="#contact" onClick={closeMenu}>Book a gig <span>↗</span></a></nav></header>
     <main id="top">
       <HeroSlider />
       <AboutSlider />
